@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İzmir - Şehrim</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      background-image: url('denizresmi.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      color: #00bfff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 64px;
+      margin: 0;
+    }
+
+    .menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .nav a:hover {
+      background-color: #eee;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 20px;
+      background: white;
+    }
+
+    .slider img {
+      height: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      color: #0077cc;
+    }
+
+    .highlight {
+      scroll-margin-top: 100px;
+    }
+  </style>
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="menu" onclick="toggleNav()">☰</div>
+    <div id="nav" class="nav">
+      <a href="index.html">Hakkımda</a>
+      <a href="egitim.html">Eğitim</a>
+      <a href="sehrim.html">şehrim</a>
+    </div>
+    <h1>İzmir</h1>
+  </div>
+
+  <div class="slider">
+    <img src="kordon.jpg" onclick="scrollToSection('kordon')" alt="Kordon">
+    <img src="urla.jpg" onclick="scrollToSection('urla')" alt="Urla">
+    <img src="alsancak-bornova.jpg" onclick="scrollToSection('alsancak')" alt="Alsancak-Bornova">
+    <img src="asansor.jpg" onclick="scrollToSection('asansor')" alt="Tarihi Asansör">
+    <imh src="efes.jpg" onclick="scrollToSection('efes')" alt="Efes Antik Kenti">
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <h2 style="color:#cc3300">Nüfus</h2>
+      <p>İzmir, yaklaşık 4.5 milyonluk nüfusu ile Türkiye'nin en kalabalık üçüncü şehridir.</p>
+    </div>
+    <div class="section">
+      <h2 style="color:#006600">Gezilecek Yerler</h2>
+      <p>Kordon, Tarihi Asansör, Alsancak, Urla ve daha birçok yer İzmir'in gezilecek alanlarındandır.</p>
+    </div>
+    <div class="section">
+      <h2 style="color:#cc9900">Hava Koşulları</h2>
+      <p>İzmir'de yazları sıcak ve kurak, kışları ise ılıman ve yağışlı geçer.</p>
+    </div>
+    <div class="section">
+      <h2 style="color:#9900cc">Lezzetler</h2>
+      <p>Boyoz, kumru, gevrek gibi lezzetler İzmir'e özgüdür.</p>
+    </div>
+    <div class="section">
+      <h2 style="color:#009999">Tarihi Özellikler</h2>
+      <p>İzmir, antik Smyrna kentinin üzerine kuruludur ve köklü bir tarihe sahiptir.</p>
+    </div>
+    <div class="section">
+      <h2 style="color:#cc3366">Yaşam Koşulları</h2>
+      <p>İzmir, sosyal yaşamı, ulaşımı ve iklimi ile yaşam kalitesi yüksek bir şehirdir.</p>
+    </div>
+
+    <div id="kordon" class="section highlight">
+      <h2>Kordon</h2>
+      <p>Kordon, deniz kenarında yürüyüş yapılabilen, kafelerin sıralandığı İzmir’in en popüler yerlerinden biridir.</p>
+    </div>
+    <div id="urla" class="section highlight">
+      <h2>Urla</h2>
+      <p>Urla, doğal güzellikleri, sahil kasabası havası ve lezzetli restoranlarıyla ünlüdür.</p>
+    </div>
+    <div id="alsancak" class="section highlight">
+      <h2>Alsancak-Bornova</h2>
+      <p>Alsancak canlı sosyal hayatı, Bornova ise genç nüfusu ve öğrenci yaşamı ile dikkat çeker.</p>
+    </div>
+    <div id="asansor" class="section highlight">
+      <h2>Tarihi Asansör</h2>
+      <p>Asansör, 1907 yılında inşa edilmiş olup İzmir’in simgelerinden biridir. Seyir terasından harika manzaralar izlenebilir.</p>
+    </div>
+    <div id="efes" class="section highlight">
+      <h2>Efes Antik Kenti</h2>
+      <p>Efes, antik Roma dönemine ait kalıntıları ile ünlü bir arkeolojik alandır.</p>
+  </div>
+</body>
+</html>
