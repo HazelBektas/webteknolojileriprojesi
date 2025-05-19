@@ -3,116 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>İzmir - Şehrim</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    .header {
-      background-image: url('denizresmi.jpeg'); 
-      background-size: cover;
-      background-position: center;
-      color: #00bfff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .header h1 {
-      font-size: 64px;
-      margin: 0;
-    }
-
-    .menu {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      cursor: pointer;
-    }
-
-    .nav {
-      display: none;
-      position: absolute;
-      right: 20px;
-      top: 60px;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .nav a {
-      display: block;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .nav a:hover {
-      background-color: #eee;
-    }
-
-    .slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      padding: 20px;
-      background: white;
-    }
-
-    .slider img {
-      height: 200px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      color: #0077cc;
-    }
-
-    .highlight {
-      scroll-margin-top: 100px;
-    }
-  </style>
+ 
   <script>
-    function toggleNav() {
-      const nav = document.getElementById('nav');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
   </script>
 </head>
 <body>
-  <div class="header">
-    <div class="menu" onclick="toggleNav()">☰</div>
-    <div id="nav" class="nav">
-      <a href="index.html">Hakkımda</a>
-      <a href="egitim.html">Eğitim</a>
-      <a href="sehrim.html">şehrim</a>
-    </div>
-    <h1>İzmir</h1>
+  
+   <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
+  <!-- Navigasyon menüsü -->
+  <nav id="menu">
+    <a href="index.html">Hakkımda</a>
+    <a href="egitim.html">Eğitim</a>
+    <a href="sehrim.html">Şehrim</a>
+  </nav>
 
-  <div class="slider">
-    <img src="kordon.jpg" onclick="scrollToSection('kordon')" alt="Kordon">
-    <img src="urla.jpg" onclick="scrollToSection('urla')" alt="Urla">
-    <img src="alsancak-bornova.jpg" onclick="scrollToSection('alsancak')" alt="Alsancak-Bornova">
-    <img src="asansor.jpg" onclick="scrollToSection('asansor')" alt="Tarihi Asansör">
-    <imh src="efes.jpg" onclick="scrollToSection('efes')" alt="Efes Antik Kenti">
+
+    <h1 class="header">İzmir</h1>
   </div>
+  <div class="slider">
+  <a href="#kordon"><img src="images/kordon.jpg" alt="Kordon"></a>
+  <a href="#urla"><img src="images/urla.jpg" alt="Urla"></a>
+  <a href="#alsancak"><img src="images/alsancak.jpg" alt="Alsancak ve Bornova"></a>
+  <a href="#asansor"><img src="images/asansor.jpg" alt="Tarihi Asansör"></a>
+</div>
+
+ 
 
   <div class="content">
     <div class="section">
