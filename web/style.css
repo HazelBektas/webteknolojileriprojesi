@@ -1,4 +1,4 @@
-<style>
+
     body {
       background-color: #f9f7f1;
       color: #3a3a3a;
@@ -109,7 +109,8 @@
       color: #00bfff;
       padding: 80px 20px;
       text-align: center;
-      font-size: 50px;
+      font-size: 70px;
+      font-style: italic;
     }
 
     .header h1 {
@@ -189,29 +190,86 @@
       background-color: #eee;
     }
 
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 33%;
+  height: 300px;
+  margin: 40px auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-
-    
-    .slider {
+.slider-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 15px;
-  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
-.slider img {
-  width: 60%;
-  max-width: 300px;
-  height: 80%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
 }
 
-.slider img:hover {
-  transform: scale(1.05);
-}  
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    height: 200px;
+    width: 90%;
+  }
+
+  .slide p {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .slider-btn {
+    font-size: 24px;
+    padding: 6px;
+  }
+}
 
     .content {
       padding: 20px;
@@ -229,4 +287,4 @@
       scroll-margin-top: 100px;
     }
 
-  </style>  
+   

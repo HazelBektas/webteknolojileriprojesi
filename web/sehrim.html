@@ -30,15 +30,31 @@
 
 
     <h1 class="header">İzmir</h1>
+
+<div class="slider-wrapper">
+  <div class="slider-track" id="sliderTrack">
+    <div class="slide" onclick="scrollToSection('kordon')">
+      <img src="images/kordon.jpg" alt="Kordon">
+      <p>Kordon</p>
+    </div>
+    <div class="slide" onclick="scrollToSection('urla')">
+      <img src="images/urla.jpg" alt="Urla">
+      <p>Urla</p>
+    </div>
+    <div class="slide" onclick="scrollToSection('alsancak')">
+      <img src="images/alsancak.jpg" alt="Alsancak">
+      <p>Alsancak - Bornova</p>
+    </div>
+    <div class="slide" onclick="scrollToSection('asansor')">
+      <img src="images/asansor.jpg" alt="Asansör">
+      <p>Tarihi Asansör</p>
+    </div>
   </div>
-  <div class="slider">
-  <a href="#kordon"><img src="images/kordon.jpg" alt="Kordon"></a>
-  <a href="#urla"><img src="images/urla.jpg" alt="Urla"></a>
-  <a href="#alsancak"><img src="images/alsancak.jpg" alt="Alsancak ve Bornova"></a>
-  <a href="#asansor"><img src="images/asansor.jpg" alt="Tarihi Asansör"></a>
+
+  <button class="slider-btn prev" onclick="prevSlide()">‹</button>
+  <button class="slider-btn next" onclick="nextSlide()">›</button>
 </div>
 
- 
 
   <div class="content">
     <div class="section">
@@ -65,26 +81,60 @@
       <h2 style="color:#cc3366">Yaşam Koşulları</h2>
       <p>İzmir, sosyal yaşamı, ulaşımı ve iklimi ile yaşam kalitesi yüksek bir şehirdir.</p>
     </div>
-
+     <br> <br> <br>
+    <h2 style="color:#00a7cc">Görseller Hakkındaki İçerikler:</h2>
     <div id="kordon" class="section highlight">
-      <h2>Kordon</h2>
+      <h3>Kordon</h3>
       <p>Kordon, deniz kenarında yürüyüş yapılabilen, kafelerin sıralandığı İzmir’in en popüler yerlerinden biridir.</p>
     </div>
     <div id="urla" class="section highlight">
-      <h2>Urla</h2>
+      <h3>Urla</h3>
       <p>Urla, doğal güzellikleri, sahil kasabası havası ve lezzetli restoranlarıyla ünlüdür.</p>
     </div>
     <div id="alsancak" class="section highlight">
-      <h2>Alsancak-Bornova</h2>
+      <h3>Alsancak-Bornova</h3>
       <p>Alsancak canlı sosyal hayatı, Bornova ise genç nüfusu ve öğrenci yaşamı ile dikkat çeker.</p>
     </div>
     <div id="asansor" class="section highlight">
-      <h2>Tarihi Asansör</h2>
+      <h3>Tarihi Asansör</h3>
       <p>Asansör, 1907 yılında inşa edilmiş olup İzmir’in simgelerinden biridir. Seyir terasından harika manzaralar izlenebilir.</p>
     </div>
     <div id="efes" class="section highlight">
-      <h2>Efes Antik Kenti</h2>
+      <h3>Efes Antik Kenti</h3>
       <p>Efes, antik Roma dönemine ait kalıntıları ile ünlü bir arkeolojik alandır.</p>
   </div>
+
+  <script>
+  
+  let currentIndex = 0;
+  const track = document.getElementById("sliderTrack");
+  const totalSlides = track.children.length;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  setInterval(nextSlide, 3000); // 3 saniyede bir otomatik geçiş
+
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+
+</script>
+
 </body>
 </html>
