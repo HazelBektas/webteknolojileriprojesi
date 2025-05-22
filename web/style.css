@@ -345,3 +345,72 @@
   transform: scale(1.05);
 }
 
+/*ilgialanlarım sayfası style ı*/ 
+
+/* İlgi Alanlarım Başlık */
+.page-title {
+  font-size: 3rem;
+  color: #3a86ff; /* canlı mavi örnek */
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Kartlar grid düzeni: 3 sütun, 4 satır toplam 12 */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tek kart stili */
+.card {
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Kart görseli */
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Kart içeriği */
+.card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #023047;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #555;
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+
+.card-location {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #219ebc;
+  text-align: right;
+}
