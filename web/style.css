@@ -354,13 +354,22 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+  #places-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+ 
+
+
 .place-item {
   background-color: #f0f8ff;
-  margin-bottom: 1rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
 }
 
 .place-item:hover {
@@ -383,3 +392,41 @@
   text-align: center;
   font-weight: bold;
 }
+ 
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #e0f7fa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Login Sayfası Stilleri */
+.login-body {
+  background: linear-gradient(to right, #cce5ff, #e6f2ff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-form {
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-form h2 {
+  color: #004085;
+  font-weight: bold;
+}
+
