@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
   <title>İzmir - Şehrim</title>
  
   <script>
@@ -31,6 +32,7 @@
     <a href="mirasımız.html">Mirasımız</a>
     <a href="ilgi_alanlarım.html">İlgi Alanlarım</a>
     <a href="login.html">Login sayfası</a> 
+    <a href="iletisim.html">İletişim</a>
   </nav>
 
 
@@ -54,6 +56,11 @@
       <img src="images/asansor.jpg" alt="Asansör">
       <p>Tarihi Asansör</p>
     </div>
+    <div class="slide" onclick="scrollToSection('alaçatı')">
+      <img src="images/Alaçatı.jpg" alt="Alaçatı">
+      <p>Alaçatı</p>
+    </div>
+
   </div>
 
   <button class="slider-btn prev" onclick="prevSlide()">‹</button>
@@ -64,27 +71,29 @@
   <div class="content">
     <div class="section">
       <h2 style="color:#cc3300">Nüfus</h2>
-      <p>İzmir, yaklaşık 4.5 milyonluk nüfusu ile Türkiye'nin en kalabalık üçüncü şehridir.</p>
+      <p>İzmir'in nüfusu 4.5 milyon civarındadır. bu kalabalık nüfus şehrin sosyal yaşamını canlandırırken ulaşım konut çevre alanlarında sorun oluşturabiliyor.Özellikle yaz aylarında tatil için bir çok insanın gelmesiyle şehir daha da hareketleniyor. Nüfusun fazla olması alışveriş eğitim sağlık gibi hizmetleri geliştiriyor ama trafik yoğunlığu ve gürültü gibi olumsuz etkenler de oluşturuyor.</p>
     </div>
     <div class="section">
       <h2 style="color:#006600">Gezilecek Yerler</h2>
-      <p>Kordon, Tarihi Asansör, Alsancak, Urla ve daha birçok yer İzmir'in gezilecek alanlarındandır.</p>
+      <p>Kİzmir, tarihi ve doğal güzellikleriyle dolu bir şehir. Gerek şehir merkezinde gerek çevresinde keşfedilecek pek çok yer bulunuyor. Tatil alanları için çeşme, bodrum, Alaçatı, Foça, Seferihisar; Alışveriş için Bornava, Konak, Gaziemir tarihi yerleri için; Selçuk, Bergama, Birgi gibi çok çeşitli yerler vardır.</p>
     </div>
     <div class="section">
       <h2 style="color:#cc9900">Hava Koşulları</h2>
-      <p>İzmir'de yazları sıcak ve kurak, kışları ise ılıman ve yağışlı geçer.</p>
+      <p>İzmir'de Akdeniz iklimi etkisi görülüryazları sıcak ve kurak, kışları ise ılıman ve yağışlı geçer. Yaz aylarında hava 40 dereceyi bulur ve oldukça bunaltıcı olduğu anlar olabilir. </p>
     </div>
     <div class="section">
       <h2 style="color:#9900cc">Lezzetler</h2>
-      <p>Boyoz, kumru, gevrek gibi lezzetler İzmir'e özgüdür.</p>
+      <p>İzmir, Ege Bölgesinde yer alması sebebiyle zeytinyağlı ve yeşilliklere mutfağında sıkça yer verir. Enginar, semizotu yemeklerde ve salatalarda kullanılan yeşilliklerden bazılarıdır.izmire özgü olan lezzetlere boyoz, kumru, gevrek gibi lezzetleri verebiliriz. Deniz ürünleri ve yeşilliklerin birleştiğini düşünürsek izmir mutfağı sağlıklı ve lezzetlidir. </p>
     </div>
     <div class="section">
       <h2 style="color:#009999">Tarihi Özellikler</h2>
-      <p>İzmir, antik Smyrna kentinin üzerine kuruludur ve köklü bir tarihe sahiptir.</p>
+      <p>İzmir, İyonlardan Osmanlı'ya kadar pek çok medeniyete ev sahipliği yapmış köklü bir şehirdir. Efes Antik Kenti, Agora, Kadifekale ve Tarihi Asansör gibi yapılar, bu zengin tarihi yansıtan önemli yerlerdendir. Şehir, geçmişin izlerini günümüzle harmanlayan eşsiz bir kültürel mirasa sahiptir.</p>
     </div>
     <div class="section">
       <h2 style="color:#cc3366">Yaşam Koşulları</h2>
-      <p>İzmir, sosyal yaşamı, ulaşımı ve iklimi ile yaşam kalitesi yüksek bir şehirdir.</p>
+      <p>İzmir, ılıman iklimi, deniz kıyısındaki konumu ve modern şehir yapısıyla yaşam kalitesi yüksek bir şehirdir. Ulaşım ağı gelişmiştir, sosyal yaşam canlıdır, eğitim ve sağlık hizmetleri erişilebilirdir. Aynı zamanda doğal alanlar ve kültürel etkinlikler, sakin ve dengeli bir yaşam sunar.
+
+</p>
     </div>
      <br> <br> <br>
     <h2 style="color:#00a7cc">Görseller Hakkındaki İçerikler:</h2>
@@ -98,15 +107,15 @@
     </div>
     <div id="alsancak" class="section highlight">
       <h3>Alsancak-Bornova</h3>
-      <p>Alsancak canlı sosyal hayatı, Bornova ise genç nüfusu ve öğrenci yaşamı ile dikkat çeker.</p>
+      <p>Alsancak canlı sosyal hayatı, Bornova ise genç nüfusu ve öğrenci yaşamı ile dikkat çeker. Hem alışveriş merkezleri hem okullar sebebiyle epey kalabalık yerlerdir.</p>
     </div>
     <div id="asansor" class="section highlight">
       <h3>Tarihi Asansör</h3>
       <p>Asansör, 1907 yılında inşa edilmiş olup İzmir’in simgelerinden biridir. Seyir terasından harika manzaralar izlenebilir.</p>
     </div>
-    <div id="efes" class="section highlight">
-      <h3>Efes Antik Kenti</h3>
-      <p>Efes, antik Roma dönemine ait kalıntıları ile ünlü bir arkeolojik alandır.</p>
+    <div id="alaçatı" class="section highlight">
+      <h3>Alaçatı</h3>
+      <p>Alaçatı, Çeşme ilçesine bağlı, taş evleri, dar sokakları ve renkli atmosferiyle ünlü bir tatil beldesidir. Çeşme ve Urla gibi popüler yaz destinasyonları arasında yer alır.</p>
   </div>
 
   <script>
